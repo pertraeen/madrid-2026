@@ -6,6 +6,10 @@ dist/
 build/
 coverage/
 
+# VitePress cache and generated output
+docs/.vitepress/cache
+docs/.vitepress/dist
+
 # Logs
 *.log
 npm-debug.log*
