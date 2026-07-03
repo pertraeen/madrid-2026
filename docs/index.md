@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Madrid 2026"
   text: "Ferieinformasjon"
-  tagline: My great project tagline
+  tagline: 9. juli til 16.juli
   actions:
     - theme: brand
       text: Markdown Examples
