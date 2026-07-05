@@ -53,7 +53,7 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url || steps.deployment_retry_final.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
@@ -61,11 +61,26 @@ jobs:
         continue-on-error: true
         uses: actions/deploy-pages@v4
 
+      - name: Wait before retry
+        if: ${{ steps.deployment.outcome == 'failure' }}
+        run: sleep 30
+
       - name: Retry deploy to GitHub Pages
         id: deployment_retry
         if: ${{ steps.deployment.outcome == 'failure' }}
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before final retry
+        if: ${{ steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure' }}
+        run: sleep 30
+
+      - name: Final retry deploy to GitHub Pages
+        id: deployment_retry_final
+        if: ${{ steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure' }}
+        continue-on-error: true
         uses: actions/deploy-pages@v4
 
       - name: Fail if deployment did not succeed
-        if: ${{ steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure' }}
+        if: ${{ steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure' && steps.deployment_retry_final.outcome == 'failure' }}
         run: exit 1
