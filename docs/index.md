@@ -8,8 +8,8 @@ hero:
   tagline: 9. juli til 16.juli
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Transport
+      link: /transport
     - theme: alt
       text: API Examples
       link: /api-examples
