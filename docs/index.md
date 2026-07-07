@@ -13,11 +13,9 @@ hero:
   - theme: brand
     text: Transport
     link: /transport
+  - theme: brand
+    text: Shopping
+    link: /shopping
     
-features:
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
