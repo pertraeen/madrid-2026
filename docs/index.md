@@ -16,6 +16,9 @@ hero:
   - theme: brand
     text: Shopping
     link: /shopping
+  - theme: brand
+    text: Ord og utrykk
+    link: /translation
     
 ---
 
