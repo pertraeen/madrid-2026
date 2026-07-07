@@ -17,7 +17,8 @@ export default defineConfig({
         items: [
           { text: 'Reise', link: '/travel' },
           { text: 'Transport', link: '/transport' },
-          { text: 'Shopping', link: '/shopping' }
+          { text: 'Shopping', link: '/shopping' },
+          { text: 'Ord og uttrykk', link: '/translation' }
         ]
       }
     ],
