@@ -9,6 +9,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Reise', link: '/travel'},
       { text: 'Transport', link: '/transport' }
     ],
 
@@ -16,8 +17,8 @@ export default defineConfig({
       {
         text: 'Nyttig',
         items: [
+          { text: 'Reise', link: '/travel' },
           { text: 'Transport', link: '/transport' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
     ],

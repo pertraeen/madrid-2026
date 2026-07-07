@@ -7,13 +7,13 @@ hero:
   text: "Ferieinformasjon"
   tagline: 9. juli til 16.juli
   actions:
-    - theme: brand
-      text: Transport
-      link: /transport
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
+  - theme: brand
+    text: Reise
+    link: /travel
+  - theme: brand
+    text: Transport
+    link: /transport
+    
 features:
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
